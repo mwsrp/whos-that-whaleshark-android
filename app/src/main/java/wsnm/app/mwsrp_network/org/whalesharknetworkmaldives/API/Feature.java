@@ -22,6 +22,11 @@ package wsnm.app.mwsrp_network.org.whalesharknetworkmaldives.API;
 
 public class Feature
 {
+    public static String MEDIA_KEY_ID           = "id";
+    public static String MEDIA_KEY_FEATURE      = "feature";
+    public static String MEDIA_KEY_BODY_PART    = "body_part";
+    public static String MEDIA_KEY_SIDE         = "side";
+
     private Integer mId;
     private String mFeature;
     private String mBodyPart;

@@ -22,6 +22,12 @@ package wsnm.app.mwsrp_network.org.whalesharknetworkmaldives.API;
 
 public class Media {
 
+    public static String MEDIA_KEY_ID           = "id";
+    public static String MEDIA_KEY_TYPE         = "type";
+    public static String MEDIA_KEY_THUMB_URL    = "thumb_url";
+    public static String MEDIA_KEY_URL          = "url";
+    public static String MEDIA_KEY_CREDIT       = "credit";
+
     public Media(Integer id, String type, String thumUrl, String url, String credit) {
         this.mId = id;
         this.mType = type;

@@ -7,6 +7,9 @@
     android:fitsSystemWindows="true"
     tools:context="wsnm.app.mwsrp_network.org.whalesharknetworkmaldives.EncountersActivity">
 
-
+    <ListView android:id="@+id/encountersListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
 
 </android.support.design.widget.CoordinatorLayout>

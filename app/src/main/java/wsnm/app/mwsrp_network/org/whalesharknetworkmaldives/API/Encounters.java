@@ -24,7 +24,32 @@ import java.util.ArrayList;
 
 public class Encounters
 {
+    // JSON KEYS
+    public static String ENCOUNTERS_KEY_ID                  = "id";
+    public static String ENCOUNTERS_KEY_TIME                = "encounter_time";
+    public static String ENCOUNTERS_KEY_NORTHING            = "northing";
+    public static String ENCOUNTERS_KEY_EASTING             = "easting";
+    public static String ENCOUNTERS_KEY_NORTHING_APROX      = "northing_approx";
+    public static String ENCOUNTERS_KEY_EASTING_APROX       = "easting_approx";
+    public static String ENCOUNTERS_KEY_SHARK_ID            = "shark_id";
+    public static String ENCOUNTERS_KEY_LENGTH_EST          = "length_est";
+    public static String ENCOUNTERS_KEY_LENGTH_TAPE         = "length_tape";
+    public static String ENCOUNTERS_KEY_LENGTH_LZR          = "length_lzr";
+    public static String ENCOUNTERS_KEY_SHARK_HEADING       = "shark_heading";
+    public static String ENCOUNTERS_KEY_BEHAVIOUR           = "behaviour";
+    public static String ENCOUNTERS_KEY_TRIP_DATE           = "trip_date";
+    public static String ENCOUNTERS_KEY_USER_ID             = "user_id";
+    public static String ENCOUNTERS_KEY_CONTRIBUTOR         = "contributor";
+    public static String ENCOUNTERS_KEY_SHARK_NAME          = "shark_name";
+    public static String ENCOUNTERS_KEY_LOCATION_NAME       = "location_name";
+    public static String ENCOUNTERS_KEY_CONTRIBUTOR_IMAGE   = "contributor_image";
+    public static String ENCOUNTERS_KEY_LOCATION_TITLE      = "location_tile";
+    public static String ENCOUNTERS_KEY_MEDIA               = "media";
+    public static String ENCOUNTERS_KEY_FEATURES            = "distinguishing_features";
 
+
+
+    // Private fields
     private Integer mId;
     private String mTime;
     private String mNorthing;
@@ -40,6 +65,8 @@ public class Encounters
     private String mLocationName;
     private String mContributorImage;
     private String mLocationTile;
+
+
 
     private ArrayList<Media> mMediaList;
     private ArrayList<Feature> mFeatureList;
@@ -65,13 +92,14 @@ public class Encounters
         this.mContributorImage = contributorImage;
         this.mLocationTile = locationTile;
 
-        this.mMediaList.clear();
-        this.mFeatureList.clear();
+        this.mMediaList = new ArrayList<Media>();
+        this.mFeatureList = new ArrayList<Feature>();
+
     }
 
-    public void addMedia (Media media)
+    public void addMedia (ArrayList<Media> media)
     {
-        this.mMediaList.add(media);
+        this.mMediaList = new ArrayList<Media>(media);
     }
 
     public void addFeature (Feature feature)
@@ -80,4 +108,71 @@ public class Encounters
     }
 
 
+    public Integer getId() {
+        return mId;
+    }
+
+    public String getTime() {
+        return mTime;
+    }
+
+    public String getNorthing() {
+        return mNorthing;
+    }
+
+    public String getEasting() {
+        return mEasting;
+    }
+
+    public Double getNorthingApprox() {
+        return mNorthingApprox;
+    }
+
+    public Double getEastingApprox() {
+        return mEastingApprox;
+    }
+
+    public String getSharkId() {
+        return mSharkId;
+    }
+
+    public String getBehaviour() {
+        return mBehaviour;
+    }
+
+    public String getTripDate() {
+        return mTripDate;
+    }
+
+    public Integer getUserId() {
+        return mUserId;
+    }
+
+    public String getContributor() {
+        return mContributor;
+    }
+
+    public String getSharkName() {
+        return mSharkName;
+    }
+
+    public String getLocationName() {
+        return mLocationName;
+    }
+
+    public String getContributorImage() {
+        return mContributorImage;
+    }
+
+    public String getLocationTile() {
+        return mLocationTile;
+    }
+
+    public ArrayList<Media> getMediaList() {
+        return mMediaList;
+    }
+
+    public ArrayList<Feature> getFeatureList() {
+        return mFeatureList;
+    }
 }
